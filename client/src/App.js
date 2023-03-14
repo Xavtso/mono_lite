@@ -16,6 +16,7 @@ const api = axios.create({
     axios
       .get("http://localhost:5000/api")
       .then((response) => {
+        console.log(response.data);
         setBackendData(response.data);
       })
       .catch((error) => console.log(error));
