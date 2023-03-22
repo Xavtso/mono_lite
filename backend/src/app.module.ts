@@ -5,12 +5,9 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { UsersModule } from './users/users.module';
 import { ConfigModule } from '@nestjs/config';
 import { User } from './users/user.model';
-import { AccountsModule } from './accounts/accounts.module';
-import { CardsService } from './cards/cards.service';
 import { CardsModule } from './cards/cards.module';
 import { Card } from './cards/card.model';
-import * as mssql from 'mssql';
-import * as tedious from 'tedious'
+import * as tedious from 'tedious';
 
 @Module({
   controllers: [AppController],
@@ -22,21 +19,20 @@ import * as tedious from 'tedious'
     SequelizeModule.forRoot({
       dialect: 'mssql',
       dialectModule: tedious,
-      username: 'CloudSA08c87698',
-      password: 'vh2004r44VH',
-      host: 'monolite.database.windows.net',
+      username: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      host: process.env.DB_HOST,
       port: 1433,
-      database: 'mono_db',
+      database: process.env.DB,
       dialectOptions: {
         driver: {
           version: 'ODBC Driver 18 for SQL Server',
         },
         options: {
           encrypt: true,
-          database: 'mono_db',
           authentication: {
-            type: 'azure-active-directory-msi-app-service'
-          }
+            type: 'azure-active-directory-msi-app-service',
+          },
         },
         encrypt: true,
         trustServerCertificate: false,
