@@ -2,9 +2,9 @@
   "name": "mono_lite",
   "version": "1.0.0",
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
+  "main": "",
   "scripts": {
-    "start": "concurrently \"npm run start:backend\" \"npm run start:frontend\"",
+    "start": "concurrently \"npm install\" \"npm run test\" \"npm run build\"",
     "start:backend": "cd backend && npm run start:dev",
     "start:frontend": "cd client && npm start",
     "build": "npm run build:backend && npm run build:frontend",
