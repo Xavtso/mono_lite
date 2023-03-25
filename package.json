@@ -5,6 +5,7 @@
   "main": "index.js",
   "devDependencies": {},
   "scripts": {
+    "start": "npm install npm build npm test",
     "start:backend": "cd backend && npm run start:dev",
     "start:frontend": "cd client && npm start",
     "build": "npm run build:backend && npm run build:frontend",
