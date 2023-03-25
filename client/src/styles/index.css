@@ -1,0 +1,23 @@
+/* #9B15C1
+#201A23 */
+
+
+html{
+  /* background: linear-gradient(210deg,#CDA3AB,#9385BC,#4C60D2); */
+
+    background-color: #201A23;
+    font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: #FCFCFD;
+  line-height: 2;
+  
+  
+}
+
+.body{
+   box-sizing: border-box;
+  overflow-x: hidden;
+  
+  margin: 0;
+  padding: 0;
+}

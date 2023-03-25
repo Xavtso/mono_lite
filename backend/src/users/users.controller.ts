@@ -1,9 +1,10 @@
-import { Controller, Post,Get, Body, Param } from '@nestjs/common';
+import { Controller, Post,Get, Body, Param, NotFoundException, UnauthorizedException } from '@nestjs/common';
 import { ApiResponse,ApiOperation } from '@nestjs/swagger/dist';
 import { ApiTags } from '@nestjs/swagger/dist/decorators/api-use-tags.decorator';
 import { Card } from 'src/cards/card.model';
 import { CardsService } from 'src/cards/cards.service';
 import { createUserDto } from './dto/create-user.dto';
+import { LogInUserDto } from './dto/logIn-user.dto';
 import { User } from './user.model';
 import { UsersService } from './users.service';
 
@@ -15,7 +16,7 @@ export class UsersController {
     private usersService: UsersService,
     readonly cardService: CardsService,
   ) {}
-
+// Create or get users
   @ApiOperation({ summary: 'Create User and Card' })
   @ApiResponse({ status: 200, type: User  })
   @Post()
@@ -40,8 +41,18 @@ export class UsersController {
   @ApiResponse({ status: 200, type: [User] })
   @Get(':user_id')
   async getCardById(@Param('user_id') user_id: number) {
-    const card = await this.usersService.getUserById(user_id);
-    return card;
+    const user = await this.usersService.getUserById(user_id);
+    return user;
+  }
+  // //////////////////////////
+
+
+
+  // Authorize and Validate Users
+  @Post('/login')
+  async loginUser(@Body() dto:LogInUserDto) {
+    const user = await this.usersService.getUserbyEmail(dto)
+    return user
   }
 }
 

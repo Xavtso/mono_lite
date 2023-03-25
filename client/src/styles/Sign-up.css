@@ -1,0 +1,184 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+    z-index: 1;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 90%;
+  max-width: 25rem;
+  height: auto;
+  border: 1px solid #CDA3AB;
+  box-shadow: #9385BC 1px 1px 5px 1px;
+  border-radius: 40px;
+    background: linear-gradient(210deg,#CDA3AB,#9385BC,#4C60D2);
+
+  margin: auto;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+label {
+  position: relative;
+  top: 25px;
+  margin-left: 10% ;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 2px;
+    color: #343333;
+  width: fit-content;
+  
+}
+
+input {
+  margin: 20px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 16px;
+  padding: 0.5rem;
+  box-shadow: 1px 1px 2px 1px #222 inset;
+  caret-color: blueviolet;
+  
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #292929;
+  color: #FCFCFD;
+  font-size: 1.2rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 1.7rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 12rem;
+  margin: 20px;
+}
+
+.btn-google{
+   display: inline-block;
+  background-color: #292929;
+  color: #FCFCFD;
+  font-size: 1.01rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 1.7rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  max-width: 12rem;
+  margin: 1rem;
+}
+
+.btn:hover,.btn-google:hover {
+  background-color: #343333;
+  transform: rotateZ(8deg);
+  transition: 1s;
+}
+
+.btn--text {
+  display: inline-block;
+  background: none;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+
+  border: none;
+ 
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.link{
+    color: lightgray;
+    margin-left: 1.2rem;
+}
+a{
+    text-decoration: underline;
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 568px) {
+  form {
+    width: 70%;
+    max-width: 20rem;
+  }
+  input{
+      font-size: 14px;
+      height: 0.5rem;
+      padding: 0.6rem;
+    }
+
+  .btn, .btn-google{
+    max-width: 6rem;
+    max-height: 2.5rem;
+    font-size: 0.7rem;
+    padding: 0.8rem;
+  }
+    
+
+
+
+}
+    
+    @media only screen and (max-width: 769px) {
+  form {
+    width: 70%;
+    max-width: 20rem;
+  }
+  .btn,.btn-google{
+    max-width: 5rem;
+  }
+  input{
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+  label{
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  form {
+    width: 60%;
+    max-width: 20rem;
+  }
+  .btn, .btn-google {
+    max-width: 8rem;
+    max-height: 3rem;
+    font-size: 1rem;
+    padding: 0.8rem 1.1rem;
+    text-align: center;
+  }
+  
+}
+
+@media only screen and (min-width: 1200px) {
+  form {
+    width: 50%;
+    max-width: 30rem;
+  }
+.btn,.btn-google{
+    margin-left: 3rem;
+}
+}
+
+
+
+
+
+
