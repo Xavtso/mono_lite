@@ -7,9 +7,6 @@ const SignUp = function (props) {
   const translit = new UkraineLatinTranslit();
   
 
-  const test = function (test) {
-  console.log(test);
-}
 
   const onSubmitHandler = function (e) {
     e.preventDefault();

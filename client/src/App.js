@@ -7,7 +7,8 @@ import './styles/index.css';
 function App() {
   return (
     <div className='body'>
-      <SignIn/>
+      <SignIn />
+      <SignUp/>
      <AuthForm/>
     </div>
   );
