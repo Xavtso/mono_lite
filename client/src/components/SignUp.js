@@ -17,7 +17,7 @@ const SignUp = function (props) {
     const password = e.target.elements[3].value;
 
     axios
-      .post("http://localhost:5000/users", {
+      .post(`http://localhost:${process.env.NODE_ENV}.env/users`, {
         first_name: capitalizeWords(translit.toLatin(firstName)),
         second_name: capitalizeWords(translit.toLatin(secondName)),
         email: email,

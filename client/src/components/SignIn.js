@@ -12,7 +12,7 @@ const [message, setMessage] = useState('')
     const password = e.target.elements[1].value;
 
     axios
-      .post("http://localhost:5000/users/login", {
+      .post(`http://localhost:${process.env.NODE_ENV}.env/users/login`, {
         email: email,
         password: password,
       })
@@ -21,7 +21,6 @@ const [message, setMessage] = useState('')
       })
       .catch(function (error) {
         setMessage(error.response.data.message);
-        
       });
   };
   
