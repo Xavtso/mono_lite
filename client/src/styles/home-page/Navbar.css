@@ -43,12 +43,12 @@
 .nav__link--btn:visited {
   padding: 0.8rem 2.5rem;
   border-radius: 3rem;
-  background-color: #9B15C1;
+  background-color: var(--color-primary);
 }
 
 .nav__link--btn:hover,
 .nav__link--btn:active {
   color: inherit;
-  background-color: #8618A4;
+  background-color: var(--color-primary-darker);
   
 }

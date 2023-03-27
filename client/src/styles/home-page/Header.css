@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 1;
 }
 
 .header__title {
@@ -38,19 +39,20 @@ h4 {
 }
 
 .highlight {
-  position: relative;
+position: relative;
+z-index: 2;
 }
 
 .highlight::after {
-  display: block;
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  opacity: 0.7;
-  transform: scale(1.07, 1.05) skewX(-15deg);
-  background-image: var(--gradient-primary);
+display: block;
+content: '';
+position: absolute;
+bottom: 0;
+z-index: -1;
+left: 0;
+height: 100%;
+width: 100%;
+opacity: 0.7;
+background:linear-gradient(to top left, #39b385, #9be15d);;
+transform: scale(1.07, 1.05) skewX(-15deg);
 }

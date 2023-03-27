@@ -50,57 +50,7 @@ input {
   max-width: 100%;
 }
 
-.btn {
-  display: inline-block;
-  background-color: #292929;
-  color: #FCFCFD;
-  font-size: 1.2rem;
-  font-family: inherit;
-  font-weight: 500;
-  border: none;
-  padding: 1rem 1.7rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  max-width: 12rem;
-  margin: 20px;
-}
 
-.btn-google{
-   display: inline-block;
-  background-color: #292929;
-  color: #FCFCFD;
-  font-size: 1.01rem;
-  font-family: inherit;
-  font-weight: 500;
-  border: none;
-  padding: 1rem 1.7rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  transition: all 0.3s;
-  max-width: 12rem;
-  margin: 1rem;
-}
-
-.btn:hover,.btn-google:hover {
-  background-color: #343333;
-  transform: rotateZ(8deg);
-  transition: 1s;
-}
-
-.btn--text {
-  display: inline-block;
-  background: none;
-  font-size: 1rem;
-  font-family: inherit;
-  font-weight: 500;
-
-  border: none;
- 
-  padding-bottom: 2px;
-  cursor: pointer;
-  transition: all 0.3s;
-}
 
 .link{
     color: lightgray;

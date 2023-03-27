@@ -83,7 +83,7 @@ const SignUp = function (props) {
           </div>
           <span className="link">
             Already Have an account?
-            <a href="http://localhost:5000/cards">Sign In</a>
+            <a href="http://localhost:3000/signin">Sign In</a>
           </span>
         </form>
       </div>
