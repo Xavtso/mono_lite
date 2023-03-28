@@ -18,7 +18,7 @@ const SignIn = function () {
       })
       .then(function (response) {
         // Redirect user to another page
-        window.location.replace("http://localhost:5000/users");
+        window.location.replace("http://localhost:3000/");
       })
       .catch(function (error) {
         // console.log(error);
@@ -50,16 +50,16 @@ const SignIn = function () {
           required
           title="Please enter your password "
         ></input>
-
+          {message}
         <div className="controls">
           <button className="btn" type="submit">
-            Sign Up
+            Sign In
           </button>
           <button className="btn-google">Sign via ico</button>
         </div>
         <span className="link">
           Don't registred yet? 
-          <a href="http://localhost:3000/signup">Sign Up</a>
+          <a href={`http://localhost:${process.env.CI}/signup`}>Sign Up</a>
         </span>
       </form>
     </div>

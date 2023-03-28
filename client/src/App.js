@@ -1,5 +1,5 @@
 
-import AuthForm from './components/AuthForm';
+// import AuthForm from './components/AuthForm';
 import SignIn from './components/SignIn';
 import SignUp from './components/SignUp';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
