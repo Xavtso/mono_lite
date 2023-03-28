@@ -1,4 +1,5 @@
 import { useRef, useEffect } from "react";
+import { Footer } from "react-trello/dist/styles/Base";
 import Header from "../components/home-page/Header";
 import Sections from "../components/home-page/Sections";
 
@@ -45,7 +46,7 @@ const Home = function () {
   return (
     <>
       <Header ref={headerRef }  />
-      <Sections />
+          <Sections />
     </>
   );
 };
