@@ -16,10 +16,20 @@
 }
 
 
+::-webkit-scrollbar{
+  background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #39b385;
+  border-radius: 20px;
+}
+
 
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .body {
@@ -29,8 +39,8 @@ html {
   color: #444;
   line-height: 1.9;
   background-color: #f3f3f3;
-  width: 101%;
-  overflow-x: hidden;
+  width: 102%;
+  overflow-x:hidden;
 }
 
 p {

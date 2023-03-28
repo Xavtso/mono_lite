@@ -11,7 +11,9 @@
 /* nav and stickly class at the same time */
 .nav.sticky {
   position: fixed;
+  width: 99%;
   background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 1px 1px 5px 1px lightgrey;
 }
 
 .nav__logo {
