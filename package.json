@@ -8,7 +8,7 @@
     "start:backend": "cd backend && npm run start:dev",
     "start:frontend": "cd client && npm start",
     "start:dev": "npm run start:backend && npm run start:frontend",
-    "build": "npm run build:backend",
+    "build": "npm run build:frontend",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd client && npm run build",
     "test": "echo \"Error: no test specified\""
