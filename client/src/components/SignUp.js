@@ -2,7 +2,7 @@ import axios from "axios";
 import { UkraineLatinTranslit } from "ukraine-latin";
 import { capitalizeWords } from "name-util";
 import "../styles/AuthForm.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 const SignUp = function (props) {

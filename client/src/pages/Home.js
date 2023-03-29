@@ -23,6 +23,7 @@ const Home = function () {
         );
     };
     
+      
   
   const obsOptions = {
     root: null,
@@ -32,11 +33,11 @@ const Home = function () {
 
       const header = headerRef.current
     const headerObserver = new IntersectionObserver(obsCallBack, obsOptions);
-    if (headerRef.current) {
+    if (header) {
         headerObserver.observe(header);
     }
     return () => {
-      if (headerRef.current) {
+      if (header) {
         headerObserver.unobserve(header);
       }
     };

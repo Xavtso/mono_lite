@@ -7,39 +7,39 @@ function Footer() {
     <footer className="footer">
       <ul className="footer__nav">
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             About
-          </a>
+          </p>
         </li>
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             Pricing
-          </a>
+          </p>
         </li>
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             Terms of Use
-          </a>
+          </p>
         </li>
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             Privacy Policy
-          </a>
+          </p>
         </li>
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             Careers
-          </a>
+          </p>
         </li>
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             Blog
-          </a>
+          </p>
         </li>
         <li className="footer__item">
-          <a className="footer__link" href="#">
+          <p className="footer__link" >
             Contact Us
-          </a>
+          </p>
         </li>
       </ul>
       <img src={icon} alt="Logo" className="footer__logo" />
@@ -47,7 +47,7 @@ function Footer() {
         © Copyright by
         <a
           className="footer__link twitter-link"
-          target="_blank"
+       
           href="https://www.instagram.com/v_havrona/"
         >
           Vitaliy Havrona

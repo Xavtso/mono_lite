@@ -46,9 +46,7 @@ const Testimonial = () => {
     ));
   };
 
-  const goToSlide = (slide) => {
-    setCurrentSlide(slide);
-  };
+ 
 
   const nextSlide = () => {
     if (currentSlide === slides.length - 1) {

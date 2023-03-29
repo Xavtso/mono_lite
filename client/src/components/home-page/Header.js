@@ -4,7 +4,7 @@ import hero from "../../images/hero.png";
 import "../../styles/home-page/Header.css";
 import "../../styles/home-page/Navbar.css";
 import "../../styles/home-page/Button.css";
-import SignUp from '../SignUp' 
+
 import AuthForm from "../AuthForm";
 
 const Header = forwardRef((props, ref) => {
@@ -25,6 +25,7 @@ const Header = forwardRef((props, ref) => {
   const [modal, setModal] = useState(false);
   const [content, setContent] = useState('');
   const [overlay, setOverlay] = useState('');
+
 
   const closeModal = function () { 
     setModal(false);
@@ -103,7 +104,7 @@ const Header = forwardRef((props, ref) => {
         <button className="btn--text btn--scroll-to">Learn more . . .</button>
         <img src={hero} className="header__img" alt="Minimalist bank items" />
       </div>
-<div className={`${overlay}`}></div>
+<div skip={modal} className={`${overlay}`}></div>
     </header>
   );
 });
