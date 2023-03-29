@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faUpload, faHouse, faUserXmark} from "@fortawesome/free-solid-svg-icons"
 
 const Operations = () => {
   const [activeTab, setActiveTab] = useState(1);
@@ -51,9 +52,7 @@ const Operations = () => {
             `}
         >
           <div className="operations__icon operations__icon--1">
-            <svg>
-              <use xlinkHref="img/icons.svg#icon-upload"></use>
-            </svg>
+            <FontAwesomeIcon icon={faUpload} style={{ color: "#FFBB00" }} />
           </div>
           <h5 className="operations__header">
             Tranfser money to anyone, instantly! No fees, no BS.
@@ -72,9 +71,7 @@ const Operations = () => {
           }`}
         >
           <div className="operations__icon operations__icon--2">
-            <svg>
-              <use xlinkHref="img/icons.svg#icon-home"></use>
-            </svg>
+            <FontAwesomeIcon icon={faHouse} style={{ color: "#4BBB7D" }} />
           </div>
           <h5 className="operations__header">
             Buy a home or make your dreams come true, with instant loans.
@@ -92,9 +89,7 @@ const Operations = () => {
           }`}
         >
           <div className="operations__icon operations__icon--3">
-            <svg>
-              <use xlinkHref="img/icons.svg#icon-user-x"></use>
-            </svg>
+            <FontAwesomeIcon icon={faUserXmark} style={{ color: "#FD424B" }} />
           </div>
           <h5 className="operations__header">
             No longer need your account? No problem! Close it instantly.

@@ -1,36 +1,24 @@
 import { useState } from "react";
 import SignUp from "./SignUp";
 import SignIn from "./SignIn";
+import '../styles/AuthForm.css'
 
-const AuthForm = function () {
-  const [modal, setModal] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false);
+const AuthForm = function (props) {
+  const [signForm, setSignForm] = useState("signup");
 
-  const toggleModal = function () {
-    setModal(!modal);
-    setShowSignIn(false);
+  const toggleForm = () => {
+    setSignForm(signForm === "signup" ? "signin" : "signup");
   };
 
-  const handleSignUp = function () {
-    setShowSignIn(false);
-  };
-
-  const handleSignIn = function () {
-    setShowSignIn(true);
-  };
+  const handleClose = () => {
+    console.log(props.onHide);
+    props.onHide();
+  }
 
   return (
-    <div>
-      <button onClick={toggleModal}>Open Modal</button>
-      {modal && (
-        <div>
-          {showSignIn ? (
-            <SignIn handleSignUp={handleSignUp} />
-          ) : (
-            <SignUp handleSignIn={handleSignIn} />
-          )}
-        </div>
-      )}
+    <div className="modal">
+      <button className="btn--close-modal" onClick={handleClose}>&times;</button>
+      {signForm === "signup" ? <SignUp switchForm = {toggleForm} /> : <SignIn switchForm = {toggleForm} />}
     </div>
   );
 };

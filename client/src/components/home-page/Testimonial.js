@@ -34,6 +34,22 @@ const slides = [
 const Testimonial = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  const createDots = () => {
+    return slides.map((_, i) => (
+      <button
+        key={i}
+        className={`dots__dot ${i === currentSlide ? "dots__dot--active" : ""}`}
+        onClick={() => {
+          setCurrentSlide(i);
+        }}
+      />
+    ));
+  };
+
+  const goToSlide = (slide) => {
+    setCurrentSlide(slide);
+  };
+
   const nextSlide = () => {
     if (currentSlide === slides.length - 1) {
       setCurrentSlide(0);
@@ -50,6 +66,8 @@ const Testimonial = () => {
     }
   };
 
+  const dotContainer = createDots();
+
   return (
     <section className="section" id="section--3">
       <div className="section__title section__title--testimonials">
@@ -59,27 +77,31 @@ const Testimonial = () => {
         </h3>
       </div>
 
-      <div className="slider">
-        {slides.map((slide) => (
-          <Slide key={slide.id} slide={slide} currentSlide={currentSlide} />
-        ))}
-        <button className="slider__btn slider__btn--left" onClick={prevSlide}>
-          &#10094;
+      <div className="slider" onKeyDown={(e) => { 
+        if (e.keyCode === 39) {
+          nextSlide();
+        } else if (e.keyCode === 37) {
+          prevSlide();
+        };
+
+      }}>
+        
+          {slides.map((slide, i) => (
+            <Slide key={i} slide={slide} currentSlide={currentSlide} />
+          ))}
+        
+        <div
+          className="dots"
+          
+        >
+          {dotContainer}
+        </div>
+        <button className="slider__btn slider__btn--left"  onClick={prevSlide}>
+          &larr;
         </button>
         <button className="slider__btn slider__btn--right" onClick={nextSlide}>
-          &#10095;
+          &rarr;
         </button>
-        <div className="dots">
-          {slides.map((slide, index) => (
-            <button
-              key={slide.id}
-              className={`dots__dot${
-                index === currentSlide ? "dots__dot--active" : ""
-              }`}
-              onClick={() => setCurrentSlide(index)}
-            ></button>
-          ))}
-        </div>
       </div>
     </section>
   );

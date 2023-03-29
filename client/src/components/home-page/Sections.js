@@ -3,6 +3,7 @@ import Features from "./Features";
 import '../../styles/home-page/Sections.css'
 import Operations from "./Operations";
 import Testimonial from './Testimonial';
+import Footer from './Footer';
 
 
 const Sections = function () {
@@ -12,7 +13,8 @@ const Sections = function () {
         <>
         <Features/>
             <Operations />
-            <Testimonial/>
+            <Testimonial />
+            <Footer></Footer>
         </>
         
 

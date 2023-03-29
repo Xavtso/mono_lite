@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-import '../styles/Sign-up.css'
-const SignIn = function () {
+
+const SignIn = function (props) {
 
   const [message, setMessage] = useState('')
 
@@ -27,8 +27,13 @@ const SignIn = function () {
   };
   
   return (
-    <div className="form-container">
-      <form onSubmit={onSubmitHandler}> 
+    <>
+      <h2 className="modal_header">
+        Welcome back !!! <br /> to continue please{" "}
+        <span className="highlight">Log In</span>
+      </h2>
+      <form onSubmit={onSubmitHandler} className="modal__form">
+        
         <label>Email</label>
         <input
           type="email"
@@ -36,7 +41,7 @@ const SignIn = function () {
           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           required
           title="Please enter a valid email address"
-        />
+          />
         <label>Password</label>
         <input
           type={"password"}
@@ -49,20 +54,24 @@ const SignIn = function () {
           }}
           required
           title="Please enter your password "
-        ></input>
-          {message}
+          ></input>
+        {message}
         <div className="controls">
           <button className="btn" type="submit">
-            Sign In
+            Sign Up
           </button>
-          <button className="btn-google">Sign via ico</button>
+          <button className="btn">
+            Sign via 
+          </button>
         </div>
-        <span className="link">
-          Don't registred yet? 
-          <a href={`http://localhost:${process.env.CI}/signup`}>Sign Up</a>
-        </span>
       </form>
-    </div>
+        <p className="switchLink">
+          Don't have an account ?
+          <span onClick={props.switchForm}>Sign Up</span>
+        </p>
+          
+    </>
+    
   );
 };
 

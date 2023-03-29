@@ -20,7 +20,7 @@ function Features() {
         <img src={Computer} alt="Computer" className="features__img lazy-img" />
         <div className="features__feature">
           <div className="features__icon">
-            <FontAwesomeIcon icon={faDesktop} />
+            <FontAwesomeIcon icon={faDesktop} style={{ color: "#5EC576" }} />
           </div>
           <h5 className="features__header">100% digital bank</h5>
           <p>
@@ -32,7 +32,10 @@ function Features() {
 
         <div className="features__feature">
           <div className="features__icon">
-            <FontAwesomeIcon icon={faArrowTrendUp} />
+            <FontAwesomeIcon
+              icon={faArrowTrendUp}
+              style={{ color: "#5EC576" }}
+            />
           </div>
           <h5 className="features__header">Watch your money grow</h5>
           <p>
@@ -46,7 +49,7 @@ function Features() {
         <img src={card} alt="Credit card" className="features__img lazy-img" />
         <div className="features__feature">
           <div className="features__icon">
-            <FontAwesomeIcon icon={faCreditCard} />
+            <FontAwesomeIcon icon={faCreditCard} style={{ color: "#5EC576" }} />
           </div>
           <h5 className="features__header">Free debit card included</h5>
           <p>

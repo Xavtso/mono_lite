@@ -46,7 +46,8 @@ const Home = function () {
   return (
     <>
       <Header ref={headerRef }  />
-          <Sections />
+      <Sections />
+      
     </>
   );
 };
