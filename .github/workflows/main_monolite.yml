@@ -22,7 +22,7 @@ jobs:
           node-version: '18.x'
 
       - name: npm install, build, and test
-        working-directory: ./backend 
+        working-directory: ../backend 
         run: |
           npm install
           npm run build --if-present
@@ -33,7 +33,7 @@ jobs:
         with:
           name: node-app
           # working-directory: ./backend
-          path: ./backend
+          path: backend
 
   deploy:
     runs-on: ubuntu-latest
@@ -55,4 +55,4 @@ jobs:
           app-name: 'MonoLite'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_943E888CEAD44186B8DB9F8CED15F38E }}
-          package: .
+          package: backend
